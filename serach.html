@@ -69,23 +69,15 @@
     </div>
 
     <ul class="video-list">
-        <li onclick="playVideo('video1.mp4')">ASMR Rain Sounds</li>
-        <li onclick="playVideo('video2.mp4')">Whispering Relaxation</li>
-        <li onclick="playVideo('video3.mp4')">Soft Tapping Sounds</li>
+        <li onclick="playVideo(''截屏2024-06-07 下午11.32.16.png'')">ASMR Rain Sounds</li>
     </ul>
-
-    <video id="player" controls>
-        <source id="video-source" src="" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <li onclick="playVideo('截屏2024-06-07 下午11.32.16.png')">ASMR Rain Sounds</li>
 
     <script>
         let player = document.getElementById("player");
+        let videoSource = document.getElementById("video-source");
 
         function playVideo(videoUrl) {
-            document.getElementById("video-source").src = videoUrl;
+            videoSource.src = videoUrl;
             player.load();
             player.play();
         }
